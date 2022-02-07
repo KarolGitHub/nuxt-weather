@@ -4,14 +4,14 @@
     <SideNav />
 
     <div class="app-content">
-      <nuxt />
+      <Nuxt />
     </div>
   </div>
 </template>
 
 <script>
 import Header from '../components/Header';
-import SideNav from '~/components/SideNav';
+import SideNav from '../components/SideNav';
 
 export default {
   components: {

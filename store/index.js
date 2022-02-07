@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import nav from './nav';
+import weather from './weather';
 
 Vue.use(Vuex);
 
@@ -9,5 +10,5 @@ export default () =>
     state: () => ({}),
     mutations: {},
     actions: {},
-    modules: { nav }
+    modules: { nav, weather }
   });

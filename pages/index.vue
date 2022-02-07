@@ -1,18 +1,19 @@
 <template>
   <div>
     <h1>Home Page</h1>
+    <WeatherCard />
   </div>
 </template>
 
 <script>
-export default {
-  components: {},
-  mounted() {},
-  data() {
-    return {};
-  },
+import WeatherCard from '../components/WeatherCard';
 
-  methods: {},
+export default {
+  components: { WeatherCard },
+  mounted() {},
+  data: () => ({}),
+
+  methods: {}
 };
 </script>
 
