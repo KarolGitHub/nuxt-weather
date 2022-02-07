@@ -2,21 +2,18 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true,
+    node: true
   },
   parserOptions: {
-    parser: 'babel-eslint',
+    parser: 'babel-eslint'
   },
-  extends: ['plugin:vue/essential', 'eslint:recommended'],
+  extends: ['eslint:recommended', 'plugin:vue/essential', 'plugin:prettier/recommended'],
 
   plugins: ['vue'],
 
   rules: {
-    'prettier/prettier': [
-      'warn',
-      { singleQuote: true, endOfLine: 'auto', trailingComma: 'all' },
-    ],
+    'prettier/prettier': ['warn', { singleQuote: true, endOfLine: 'auto', trailingComma: 'all' }],
     'no-unused-vars': 'warn',
-    'no-console': 'off',
-  },
+    'no-console': 'off'
+  }
 };
