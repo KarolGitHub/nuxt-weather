@@ -30,7 +30,6 @@ export default {
           country: res.data.sys.country
         };
         commit('setData', newData);
-        console.log(newData);
       } catch (error) {
         console.log(error);
         commit('setData', {});
