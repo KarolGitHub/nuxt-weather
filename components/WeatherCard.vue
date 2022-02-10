@@ -67,14 +67,6 @@ export default {
       };
       return imgObj[this.getWeatherData.info];
     }
-  },
-  methods: {
-    fetchWeatherData(search) {
-      this.$store.dispatch('weather/fetchData', search);
-    }
-  },
-  created() {
-    this.$store.dispatch('weather/fetchData', 'rzeszow');
   }
 };
 </script>
