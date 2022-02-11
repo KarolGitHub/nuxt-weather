@@ -1,9 +1,9 @@
 <template>
   <div class="sidenav-container">
-    <div v-if="toggleSidebar" class="backdrop" @click="$store.dispatch('nav/toggleSidebar')"></div>
+    <div v-if="getSidebar" class="backdrop" @click="toggleSidebar"></div>
 
     <transition name="slide-side">
-      <div v-if="toggleSidebar" class="sidenav">
+      <div v-if="getSidebar" class="sidenav">
         <AppLinks />
       </div>
     </transition>
@@ -11,13 +11,19 @@
 </template>
 
 <script>
-import AppLinks from '~/components/appLinks';
+import { mapGetters, mapActions } from 'vuex';
+
+import AppLinks from '~/components/AppLinks';
+
 export default {
   components: { AppLinks },
   computed: {
-    toggleSidebar() {
-      return this.$store.getters['nav/getSidebar'];
-    }
+    ...mapGetters({ getSidebar: 'nav/getSidebar' })
+  },
+  methods: {
+    ...mapActions({
+      toggleSidebar: 'nav/toggleSidebar'
+    })
   }
 };
 </script>

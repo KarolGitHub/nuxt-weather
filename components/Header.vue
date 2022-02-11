@@ -1,6 +1,6 @@
 <template>
   <header class="app-header">
-    <div class="drawer-toggle" role="button" @click="$store.dispatch('nav/toggleSidebar')">
+    <div class="drawer-toggle" role="button" @click="toggleSidebar">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
@@ -13,9 +13,16 @@
 </template>
 
 <script>
-import AppLinks from '../components/appLinks';
+import { mapActions } from 'vuex';
+
+import AppLinks from '../components/AppLinks';
 export default {
-  components: { AppLinks }
+  components: { AppLinks },
+  methods: {
+    ...mapActions({
+      toggleSidebar: 'nav/toggleSidebar'
+    })
+  }
 };
 </script>
 

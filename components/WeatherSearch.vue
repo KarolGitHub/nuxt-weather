@@ -12,14 +12,18 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   data: () => ({
     search: ''
   }),
 
   methods: {
+    ...mapActions({ fetchWeatherData: 'weather/fetchData' }),
+    /** Search confirmation Event handler. Search query passed as argument*/
     searchQueryHandler() {
-      this.$emit('searchQueryHandler', this.search);
+      this.fetchWeatherData({ search: this.search, isSearched: true });
       this.search = '';
     }
   }

@@ -33,6 +33,9 @@ export default {
     ...mapGetters({ getWeatherHistory: 'weather/getHistory' })
   },
   methods: {
+    /** Redirects user to Home Page with City name passed as URL query param
+     * @param {string} name clicked City name
+     */
     searchFromHistory(name) {
       this.$router.push({ path: '/', query: { name } });
     }

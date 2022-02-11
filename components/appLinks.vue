@@ -5,13 +5,16 @@
   </ul>
 </template>
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
+  computed: {
+    ...mapGetters({ getSidebar: 'nav/getSidebar' })
+  },
   methods: {
-    toggleSidebar() {
-      if (process.client && window.innerWidth < 768) {
-        this.$store.dispatch('nav/toggleSidebar');
-      }
-    }
+    ...mapActions({
+      toggleSidebar: 'nav/toggleSidebar'
+    })
   }
 };
 </script>

@@ -30,19 +30,27 @@ export default {
     }
   },
   actions: {
+    /**
+     * GET API request.
+     * @param {string} search Search query
+     * @param {boolean} isSearched indicates whether should response from API be saved to history
+     */
     async fetchData({ commit, state }, { search, isSearched }) {
       commit('setLoading');
       try {
         const res = await api.client.get(`weather?q=${search}&units=metric&APPID=${api.Key}`);
         const newData = {
+          // generate random id
           id: uuidv4(),
           name: res.data.name,
+          // round to nearest integer
           temp: Math.round(res.data.main.temp),
           pressure: res.data.main.pressure,
           description: res.data.weather[0].description,
           info: res.data.weather[0].main,
           wind: res.data.wind.speed,
           humidity: res.data.main.humidity,
+          // returns current time and date in format: "dd.mm.yyyy hh-mm-ss"
           todayDate: new Date().toLocaleString().replace(',', ''),
           country: res.data.sys.country
         };

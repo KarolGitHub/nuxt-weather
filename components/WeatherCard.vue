@@ -63,6 +63,7 @@ import { mapGetters } from 'vuex';
 export default {
   computed: {
     ...mapGetters({ getWeatherData: 'weather/getData', isLoading: 'weather/getLoading', isError: 'weather/getError' }),
+    /** @returns {string | undefined} URL path to img based on API response weather info */
     weatherImg() {
       const imgObj = {
         Rain: require('../assets/img/rain.png'),

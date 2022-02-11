@@ -8,6 +8,8 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: $background-light;
 }
+
+// page transition
 .default-enter-active,
 .default-leave-active {
   transition: opacity 0.3s ease-in-out;

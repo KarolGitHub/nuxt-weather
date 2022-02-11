@@ -5,13 +5,16 @@ export default {
   },
   getters: { getSidebar: (state) => state.sidebar },
   mutations: {
-    toggleSidebar(state) {
+    setSidebar(state) {
       state.sidebar = !state.sidebar;
     }
   },
   actions: {
-    toggleSidebar({ commit }) {
-      commit('toggleSidebar');
+    /**  Sidebar on/off switch handler */
+    toggleSidebar({ commit, state }) {
+      if (process.client && (window.innerWidth < 768 || state.sidebar)) {
+        commit('setSidebar');
+      }
     }
   }
 };
