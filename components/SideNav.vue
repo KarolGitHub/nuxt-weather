@@ -4,7 +4,7 @@
 
     <transition name="slide-side">
       <div v-if="getSidebar" class="sidenav">
-        <AppLinks />
+        <app-links />
       </div>
     </transition>
   </div>
@@ -13,7 +13,7 @@
 <script>
 import { mapGetters, mapActions } from 'vuex';
 
-import AppLinks from '~/components/AppLinks';
+import AppLinks from '../components/appLinks';
 
 export default {
   components: { AppLinks },

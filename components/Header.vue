@@ -15,7 +15,7 @@
 <script>
 import { mapActions } from 'vuex';
 
-import AppLinks from '../components/AppLinks';
+import AppLinks from '../components/appLinks';
 export default {
   components: { AppLinks },
   methods: {

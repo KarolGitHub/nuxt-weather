@@ -6,7 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "export": "nuxt generate"
+    "generate": "nuxt generate"
   },
   "dependencies": {
     "axios": "^0.18.0",

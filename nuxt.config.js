@@ -1,7 +1,9 @@
 module.exports = {
   /* this is a static site, no Node.js */
   mode: 'spa',
-
+  generate: {
+    fallback: true
+  },
   /* Global headers parts */
   head: {
     title: 'nuxt-weather',
@@ -15,7 +17,7 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css' }
     ]
   },
-  plugins: ['~plugins/vuetify.js'],
+  plugins: ['./plugins/vuetify.js'],
   /* global SASS file */
   css: ['@/assets/global.scss'],
 
