@@ -27,6 +27,7 @@ export default {
   margin: 0 10px;
   transition: 0.3s;
   opacity: 1;
+  width: fit-content;
 }
 .nav-item:hover {
   opacity: 0.6;
@@ -37,12 +38,16 @@ export default {
   text-decoration: none;
   color: #fefefe;
   font-size: 20px;
+  border-bottom: 3px solid transparent;
 }
-
-.nav-item a:hover,
-.nav-item a:active {
+.nav-item a:hover {
   color: $text-light;
 }
+a.nuxt-link-exact-active {
+  font-weight: bold;
+  border-bottom: 3px solid red;
+}
+
 @media (max-width: 767px) {
   .nav-list {
     display: block;

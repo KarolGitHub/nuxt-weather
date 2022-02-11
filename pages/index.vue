@@ -11,8 +11,8 @@ import WeatherCard from '../components/WeatherCard';
 import WeatherSearch from '../components/WeatherSearch';
 
 export default {
-  components: { WeatherSearch, WeatherCard },
   transition: 'default',
+  components: { WeatherSearch, WeatherCard },
   methods: {
     fetchWeatherData(search) {
       this.$store.dispatch('weather/fetchData', { search, isSearched: true });

@@ -1,5 +1,5 @@
 <template>
-  <v-card v-if="getWeatherHistory.length" class="mx-auto text-left" max-width="400" tile>
+  <v-card v-if="getWeatherHistory.length" class="mx-auto pa-3 text-left" max-width="400" tile>
     <h1>Search history</h1>
 
     <v-list two-line>
@@ -19,7 +19,7 @@
     </v-list>
   </v-card>
 
-  <v-card v-else class="mx-auto text-center" max-width="400" tile>
+  <v-card v-else class="mx-auto pa-3 text-center" max-width="400" tile>
     <h1>No search history yet</h1>
     <v-btn to="/" elevation="2" x-large color="primary">Search</v-btn>
   </v-card>
@@ -41,9 +41,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.v-card {
-  padding: 16px;
-}
 h1 {
   padding: 0 10px;
   margin-bottom: 20px;

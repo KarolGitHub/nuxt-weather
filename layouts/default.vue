@@ -3,7 +3,6 @@
     <div class="app-container">
       <Header />
       <SideNav />
-
       <div class="app-content">
         <Nuxt />
       </div>

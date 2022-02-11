@@ -5,19 +5,33 @@ export default {
   namespaced: true,
   state: {
     data: {},
-    history: []
+    history: [],
+    isLoading: false,
+    isError: false
   },
-  getters: { getData: (state) => state.data, getHistory: (state) => state.history },
+  getters: {
+    getData: (state) => state.data,
+    getHistory: (state) => state.history,
+    getLoading: (state) => state.isLoading,
+    getError: (state) => state.isError
+  },
   mutations: {
     setData(state, data) {
       state.data = data;
     },
     setHistory(state, data) {
       state.history.push(data);
+    },
+    setLoading(state) {
+      state.isLoading = !state.isLoading;
+    },
+    setError(state, value) {
+      state.isError = value;
     }
   },
   actions: {
     async fetchData({ commit, state }, { search, isSearched }) {
+      commit('setLoading');
       try {
         const res = await api.client.get(`weather?q=${search}&units=metric&APPID=${api.Key}`);
         const newData = {
@@ -36,9 +50,15 @@ export default {
         if (isSearched) {
           commit('setHistory', newData);
         }
+        if (state.isError) {
+          commit('setError', false);
+        }
+        commit('setLoading');
       } catch (error) {
-        console.log(error);
+        commit('setError', true);
         commit('setData', {});
+        commit('setLoading');
+        alert(error.response.data.message);
       }
     }
   }
