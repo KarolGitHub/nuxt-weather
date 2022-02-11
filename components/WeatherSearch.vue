@@ -20,6 +20,7 @@ export default {
   methods: {
     searchQueryHandler() {
       this.$emit('searchQueryHandler', this.search);
+      this.search = '';
     }
   }
 };

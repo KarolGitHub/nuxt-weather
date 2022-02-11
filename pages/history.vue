@@ -1,10 +1,14 @@
-<template >
-  <div>
-    <h1>History Page</h1>
-  </div>
+<template>
+  <weather-history />
 </template>
+
 <script>
-export default {};
+import WeatherHistory from '../components/WeatherHistory';
+export default {
+  transition: 'default',
+  components: { WeatherHistory }
+};
 </script>
+
 <style lang="scss">
 </style>

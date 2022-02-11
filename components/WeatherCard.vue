@@ -5,7 +5,7 @@
         <v-list-item-title class="text-h5">
           {{ getWeatherData.name }} ({{ getWeatherData.country }})
         </v-list-item-title>
-        <v-list-item-subtitle>{{ getWeatherData.dateTime }}</v-list-item-subtitle>
+        <v-list-item-subtitle>{{ getWeatherData.todayDate }}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
 

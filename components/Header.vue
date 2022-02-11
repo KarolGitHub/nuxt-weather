@@ -7,7 +7,7 @@
     </div>
 
     <div class="app-links">
-      <AppLinks />
+      <app-links />
     </div>
   </header>
 </template>
