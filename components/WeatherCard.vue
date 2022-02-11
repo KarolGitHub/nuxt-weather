@@ -5,6 +5,7 @@
         <v-list-item-title class="text-h5">
           {{ getWeatherData.name }} ({{ getWeatherData.country }})
         </v-list-item-title>
+
         <v-list-item-subtitle>{{ getWeatherData.todayDate }}</v-list-item-subtitle>
       </v-list-item-content>
     </v-list-item>
@@ -14,6 +15,7 @@
         <v-col cols="6">
           <h1>{{ getWeatherData.temp }}&deg;C</h1>
         </v-col>
+
         <v-col cols="6">
           <v-img :src="weatherImg" alt="getWeatherData.info" width="92"></v-img>
         </v-col>
@@ -24,6 +26,7 @@
       <v-list-item-icon>
         <i class="fa-solid fa-circle-info" />
       </v-list-item-icon>
+
       <v-list-item-subtitle>{{ getWeatherData.description }}</v-list-item-subtitle>
     </v-list-item>
 
@@ -73,5 +76,8 @@ export default {
 <style lang="scss">
 .row {
   align-items: center;
+}
+.v-list-item__icon {
+  margin-right: 5px !important;
 }
 </style>

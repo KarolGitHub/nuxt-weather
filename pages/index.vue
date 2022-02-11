@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Weather Today</h1>
+    <h1>Weather today</h1>
     <weather-search @searchQueryHandler="fetchWeatherData" />
     <weather-card />
   </div>

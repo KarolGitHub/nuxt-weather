@@ -1,12 +1,14 @@
 <template>
-  <div class="app-container">
-    <Header />
-    <SideNav />
+  <v-app>
+    <div class="app-container">
+      <Header />
+      <SideNav />
 
-    <div class="app-content">
-      <Nuxt />
+      <div class="app-content">
+        <Nuxt />
+      </div>
     </div>
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -24,7 +26,6 @@ export default {
 <style lang="scss">
 html,
 body {
-  margin: 0;
   height: 100%;
   width: 100%;
 }

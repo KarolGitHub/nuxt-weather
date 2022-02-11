@@ -8,13 +8,11 @@ body {
   font-family: 'Poppins', sans-serif;
   background-color: $background-light;
 }
-.page-enter-active,
-.page-leave-active {
-  transition-property: opacity;
-  transition-timing-function: ease-in-out;
-  transition-duration: 500ms;
+.default-enter-active,
+.default-leave-active {
+  transition: opacity 0.3s ease-in-out;
 }
-.page-enter,
-.page-leave-to {
+.default-enter,
+.default-leave-to {
   opacity: 0;
 }

@@ -33,14 +33,6 @@ export default {
 .app-links {
   justify-self: end;
 }
-.brand-name {
-  margin: 0 10px;
-  font-size: 1.3rem;
-}
-.brand-name a {
-  text-decoration: none;
-  color: white;
-}
 .drawer-toggle .bar {
   width: 90%;
   height: 2px;

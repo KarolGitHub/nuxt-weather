@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar dense floating width="300">
+  <v-toolbar dense width="300">
     <v-text-field
       hide-details
       single-line
